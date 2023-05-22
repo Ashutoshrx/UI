@@ -7,8 +7,8 @@
 </div>
 
 <div class="container">
-  <button class="btn btn-primary" [disabled]="disableAlert" (click)="showSuccessMsg()">Show Success</button>
-  <button class="btn btn-danger" (click)="showErrorMsg()">Show warning</button>
+  <button *ngIf="!showSuccessAlert" class="btn btn-primary" [disabled]="disableAlert" (click)="showSuccessMsg()">Show Success</button>
+  <button *ngIf="!showErrorAlert" class="btn btn-danger" (click)="showErrorMsg()">Show warning</button>
   <div class="row">
     <hr>
     <app-success-alert *ngIf="showSuccessAlert" ></app-success-alert>

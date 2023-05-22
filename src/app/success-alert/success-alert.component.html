@@ -1,1 +1,9 @@
-<p>You are successful.</p>
+<p>You are successful</p>
+<div class="input-container">
+    <!-- <input class="input" name="text" type="text" (input)="updateInput($event)"> -->
+    <input class="input" name="text" type="text" [(ngModel)]="name">
+    <label class="label" for="input">Enter Your Name</label>
+    <div class="topline"></div>
+    <div class="underline"></div>
+    <span class="d-block p-2 bg-dark text-white" style="font-size: larger;">{{name}}</span>
+</div>
