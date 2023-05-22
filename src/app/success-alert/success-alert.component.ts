@@ -14,11 +14,17 @@ import { Component } from '@angular/core';
   //   `,
   // ],
 })
-export class SuccessAlertComponent{
-  name = 'Ram Ram';
-
+export class SuccessAlertComponent {
+  name = '';
+  nameCreationStatus = 'No name has been added';
   updateInput(event: Event): void {
     this.name = (<HTMLInputElement>event.target).value;
-    // console.log(event.target.value);
+  }
+  OnClickLaunchButton() {
+    if (this.name.length > 0) {
+      this.nameCreationStatus = `${this.name} has been added`;
+    } else {
+      this.nameCreationStatus = `No new name was added`;
+    }
   }
 }

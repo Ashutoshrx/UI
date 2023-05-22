@@ -1,0 +1,92 @@
+.form-control {
+    position: relative;
+    margin: 20px 0 40px;
+    width: 190px;
+  }
+  
+  .form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px #4b64e1 solid;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #cd1f1f;
+  }
+  
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: rgb(8, 186, 246);
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    color: #fff;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: rgb(4, 183, 243);
+    transform: translateY(-30px);
+  }
+
+  .btn {
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: #d89e4d;
+    text-transform: uppercase;
+    position: relative;
+    transition: .5s ease;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #0b8acf;
+    transition: .5s ease;
+  }
+  
+  .btn:hover {
+    color: #1e1e2b;
+    transition-delay: .5s;
+  }
+  
+  .btn:hover::before {
+    width: 100%;
+  }
+  
+  .btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background-color: #0dd6e4;
+    transition: .4s ease;
+    z-index: -1;
+  }
+  
+  .btn:hover::after {
+    height: 100%;
+    transition-delay: 0.4s;
+    color: aliceblue;
+  }

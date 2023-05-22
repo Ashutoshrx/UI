@@ -10,18 +10,23 @@ export class AppComponent {
   disableAlert: boolean = true;
   showSuccessAlert: boolean = false;
   showErrorAlert: boolean = false;
+  showThirdProjectAlert: boolean = false;
+
+  cards: Boolean[] = [];
+
   constructor() {
     setTimeout(() => {
-      // console.log("Buttons Enabled");    
       this.disableAlert = false;
     }, 3000);
   }
-  showSuccessMsg(){
-    // console.log("Success message clicked");
-    this.showSuccessAlert = true;    
+  showSuccessMsg() {
+    this.showSuccessAlert = true;
   }
-  showErrorMsg(){
+  showErrorMsg() {
     this.showErrorAlert = true;
-    // console.log("Warning message clicked");
-}
+  }
+  showThirdProject() {
+    this.showThirdProjectAlert = true;
+    this.cards.push(this.showThirdProjectAlert);
+  }
 }
