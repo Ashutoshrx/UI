@@ -13,6 +13,7 @@ export class AppComponent {
   showThirdProjectAlert: boolean = false;
 
   cards: Boolean[] = [];
+  // cards = new Array<Boolean>(2);
 
   constructor() {
     setTimeout(() => {
